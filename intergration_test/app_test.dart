@@ -23,14 +23,18 @@ void main() {
       (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
     final inputText = 'Hello there, this is an input.';
+
     await tester.enterText(find.byKey(Key('your-text-field')), inputText);
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle(); // for waiting to next page
+
     expect(find.byType((TypingPage)), findsNothing);
     expect(find.byType((DisplayPage)), findsOneWidget);
     expect(find.text(inputText), findsOneWidget);
+
     await tester.tap(find.byType(BackButton));
     await tester.pumpAndSettle();
+
     expect(find.byType((TypingPage)), findsOneWidget);
     expect(find.byType((DisplayPage)), findsNothing);
     expect(find.text(inputText), findsNothing);

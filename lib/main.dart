@@ -104,7 +104,7 @@ class _DisplayPageState extends State<DisplayPage> {
       appBar: AppBar(
         title: Text('Second page'),
       ),
-      body: Center(child: Text('text is here ')),
+      body: Center(child: Text(widget.displayText)),
     );
   }
 }
