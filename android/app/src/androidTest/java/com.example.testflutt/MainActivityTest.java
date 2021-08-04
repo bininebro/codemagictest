@@ -2,9 +2,9 @@
 package com.example.testflutt;
 
 import androidx.test.rule.ActivityTestRule;
-import dev.flutter.plugins.example.testflutt;
+import dev.flutter.plugins.integration_test.FlutterTestRunner;
 import org.junit.Rule;
-import org.junit.runner.RunWith;
+import org.junit.runner.Rungit With;
 // Import MainActivity from YOUR package
 import com.example.testflutt.MainActivity;
 
